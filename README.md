@@ -2,6 +2,14 @@
 Basic RISC-V RV32I CPU in VHDL for use in FPGA Prototyping
 The Potato Processor is a simple RISC-V processor written in VHDL for use in FPGAs. It implements the 32-bit integer subset of the RISC-V Specification version 2.0 and supports large parts of the the machine mode specified in the RISC-V Privileged Architecture Specification v1.10.
 
+
+
+
+![Datapath Diagram](https://github.com/mongrelgem/RISCY/blob/master/docs/diagram.png?raw=true)
+
+
+
+
 The processor has been tested on an Arty board using the example SoC design provided in the example/ directory and the applications found in the software/ directory. Synthesis and implementation has been tested on various versions of Xilinx' Vivado toolchain, most recently version 2018.2.
 
 
@@ -13,7 +21,21 @@ The processor has been tested on an Arty board using the example SoC design prov
 * Support for maximum of 8 individually maskable external interrupts (IRQs)
 * Implements a classic 5-stage RISC pipeline
 * Optional Modular instruction cache
+* Included Hardware Timer with microsecond resolution and compare interupts
 * Supports the Wishbone bus ( version B4 )
+
+## Interfacing
+
+The processor includes a wishbone interface conforming to the B4 revision of the wishbone specification
+
+| Interface type            | Master  | 
+| ------------- |:-------------------:| 
+| Address port width        | 32 bits |
+| Data port width           | 32 bits |
+| Data port granularity     |  8 bits |
+| Maximum Operand Size      | 32 bits |
+| Endianess                 | Little  |
+| Sequence of Data Transfer | In-order|
 
 ## Peripheral Interfacing
 
