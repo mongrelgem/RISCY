@@ -1,5 +1,7 @@
 # RISCY
-Basic RISC-V RV32I CPU in VHDL for use in FPGA Prototyping
+Basic RISC-V RV32I CPU in VHDL for use in FPGA Prototyping   
+
+
 The RISCY Processor is a simple RISC-V processor written in VHDL for use in FPGAs. It implements the 32-bit integer subset of the RISC-V Specification version 2.0 and supports large parts of the the machine mode specified in the RISC-V Privileged Architecture Specification v1.10.
 
 
